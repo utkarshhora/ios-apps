@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"/>
+
+<plist version="1.0">
+    <dict>
+        <key>ROOT</key>
+        <array>
+            <dict>
+                <key>id</key>
+                <string>825</string>
+                <key>Taking Damage Anim.</key>
+                <dict>
+                    <key>value</key>
+                    <string>5166</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>942</string>
+                <key>Taking Damage Anim.</key>
+                <dict>
+                    <key>value</key>
+                    <string>949</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>974</string>
+                <key>Taking Damage Anim.</key>
+                <dict>
+                    <key>value</key>
+                    <string>975</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2020</string>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2021</string>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2022</string>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2702</string>
+                <key>Taking Damage Anim.</key>
+                <dict>
+                    <key>value</key>
+                    <string>2713</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>5526</string>
+            </dict>
+        </array>
+    </dict>
+</plist>

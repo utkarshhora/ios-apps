@@ -1,0 +1,1395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"/>
+
+<plist version="1.0">
+    <dict>
+        <key>ROOT</key>
+        <array>
+            <dict>
+                <key>id</key>
+                <string>1683</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>1</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>1684</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-37.000000,-37.000000}</string>
+                        <string>{37.000000,-37.000000}</string>
+                        <string>{37.000000,37.000000}</string>
+                        <string>{-37.000000,37.000000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCoin</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCharacterConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Reward Coins</key>
+                <dict>
+                    <key>value</key>
+                    <string>5.000000</string>
+                </dict>
+                <key>Show points reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>0.200000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>90.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>258</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>point</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>259</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-68.500000,-65.500000}</string>
+                        <string>{68.500000,-65.500000}</string>
+                        <string>{68.500000,65.500000}</string>
+                        <string>{-68.500000,65.500000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupNone</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupFreeConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kReplaceBehaviour</string>
+                </dict>
+                <key>Show coin reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Reward Points</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Show points reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>0.300000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>90.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{15.000,15.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2124</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>690019</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>2125</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-126.500000,-124.500000}</string>
+                        <string>{126.500000,-124.500000}</string>
+                        <string>{126.500000,124.500000}</string>
+                        <string>{-126.500000,124.500000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupMagnet</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupFreeConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Duration</key>
+                <dict>
+                    <key>value</key>
+                    <string>8.000000</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Camera Flash</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>50.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>2195</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>720004</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>2196</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-125.000000,-128.000000}</string>
+                        <string>{125.000000,-128.000000}</string>
+                        <string>{125.000000,128.000000}</string>
+                        <string>{-125.000000,128.000000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupInvincibility</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCharacterConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Duration</key>
+                <dict>
+                    <key>value</key>
+                    <string>10.000000</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Camera Flash</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>50.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>9743</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>5000</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>9744</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-41.000000,-40.500000}</string>
+                        <string>{41.000000,-40.500000}</string>
+                        <string>{41.000000,40.500000}</string>
+                        <string>{-41.000000,40.500000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCoin</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCharacterConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Reward Coins</key>
+                <dict>
+                    <key>value</key>
+                    <string>5000.000000</string>
+                </dict>
+                <key>Show points reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Camera Flash</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>50.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>9754</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>10000</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>9755</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-41.000000,-41.000000}</string>
+                        <string>{41.000000,-41.000000}</string>
+                        <string>{41.000000,41.000000}</string>
+                        <string>{-41.000000,41.000000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCoin</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCharacterConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Reward Coins</key>
+                <dict>
+                    <key>value</key>
+                    <string>10000.000000</string>
+                </dict>
+                <key>Show points reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.500000</string>
+                </dict>
+                <key>Camera Flash</key>
+                <dict>
+                    <key>value</key>
+                    <string>1.500000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>50.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>id</key>
+                <string>9765</string>
+                <key>className</key>
+                <string>PTModelAssetPowerup</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>20000</string>
+                </dict>
+                <key>Collision Shape</key>
+                <dict>
+                    <key>id</key>
+                    <string>9766</string>
+                    <key>className</key>
+                    <string>PTModelPolygon</string>
+                    <key>Name</key>
+                    <dict>
+                        <key>value</key>
+                        <string></string>
+                    </dict>
+                    <key>points</key>
+                    <array>
+                        <string>{-41.000000,-41.000000}</string>
+                        <string>{41.000000,-41.000000}</string>
+                        <string>{41.000000,41.000000}</string>
+                        <string>{-41.000000,41.000000}</string>
+                    </array>
+                    <key>oneWayCollisionVector</key>
+                    <string>{0.000000,0.000000}</string>
+                    <key>shapeType</key>
+                    <string>1</string>
+                </dict>
+                <key>Powerup Type</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCoin</string>
+                </dict>
+                <key>Animation Placement</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kPowerupCharacterConstraint</string>
+                </dict>
+                <key>Animation Behaviour</key>
+                <dict>
+                    <key>selectedStringValue</key>
+                    <string>kOverlayBehaviour</string>
+                </dict>
+                <key>Reward Coins</key>
+                <dict>
+                    <key>value</key>
+                    <string>20000.000000</string>
+                </dict>
+                <key>Show points reward</key>
+                <dict>
+                    <key>value</key>
+                    <string>0</string>
+                </dict>
+                <key>Camera Shake</key>
+                <dict>
+                    <key>value</key>
+                    <string>2.000000</string>
+                </dict>
+                <key>Camera Flash</key>
+                <dict>
+                    <key>value</key>
+                    <string>2.000000</string>
+                </dict>
+                <key>Gameplay properties</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Max Speed</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{81.000,0.000}</string>
+                </dict>
+                <key>Gravity</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,-40.000}</string>
+                </dict>
+                <key>Jump Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,30.000}</string>
+                </dict>
+                <key>Jump Counter</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump Timeout</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Jump From Ground</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Right Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Left Lean Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Min</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Speed Max</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Speed Increase</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Time Warp</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>50.000000</string>
+                </dict>
+                <key>Velocity Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Rotation Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Bounce Force</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{9.000,25.000}</string>
+                </dict>
+                <key>Bounce</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Score Multiplier</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>1.000000</string>
+                </dict>
+                <key>Air Drag</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                    <key>value</key>
+                    <string>{0.000,0.000}</string>
+                </dict>
+                <key>Platform Friction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Game Direction</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+                <key>Fixed Rotation</key>
+                <dict>
+                    <key>visible</key>
+                    <string>0</string>
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>

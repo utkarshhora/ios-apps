@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://developer.apple.com/library/archive/qa/qa1686/_index.html -->
+<html lang="en" class="gr__developer_apple_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <title>Technical Q&amp;A QA1686: App Icons on iPhone, iPad and Apple Watch</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    
+    <meta id="book-resource-type" name="book-resource-type" content="Technical Q&amp;A">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/DTS40009882">
+    <meta id="document-version" name="document-version" content="8.0.0">
+    <meta id="build" name="build" content="c1e4c7a89af8f899a21cfa81fc33ba42">
+    <meta id="chapterId" name="chapterId" content="DTS40009882-CH1">
+    <meta id="date" name="date" content="2016-12-20">
+    <meta id="description" name="description" content="QA1686: explains how the icon files in an application bundle are used on iPhone, iPad and Apple Watch.">
+    <meta id="book-title" name="book-title" content="App Icons on iPhone, iPad and Apple Watch">
+    <meta id="book-root" name="book-root" content="./">
+    <meta id="book-json" name="book-json" content="book.json">
+    <meta id="devcenter" name="devcenter" content="Mac Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/mac">
+    <meta id="reflib" name="reflib" content="Documentation Archive">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Technical Q&amp;A}, {Technologies/Cocoa Layer/UIKit}, {Topic/User Experience}">
+    
+    
+    <meta id="copyright" name="copyright" content="Copyright 2018 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="Technical Q&amp;A QA1686">
+    <meta id="resources-uri" name="resources-uri" content="../../Resources/1282">
+    <link id="book-index-page" rel="Start" title="App Icons on iPhone, iPad and Apple Watch" type="text/html" href="https://developer.apple.com/library/archive/qa/qa1686/index.html">
+    <link id="next-page" rel="Next" type="text/html" href="https://developer.apple.com/library/archive/qa/qa1686/_index.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="https://developer.apple.com/library/archive/qa/qa1686/_index.html">
+    <link rel="stylesheet" type="text/css" href="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/feedback.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta id="platforms" name="platforms" content="">
+<style>@media print {#ghostery-purple-box {display:none !important}}</style></head>    
+<body data-gr-c-s-loaded="true" class="" id=""><a name="//apple_ref/doc/uid/DTS40009882" title="Technical Q&amp;A QA1686"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="appleglobal,appleusdeveloper,dappdeveloperlib"
+    </script>
+
+    <script type="text/javascript" src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/s_code_h.js"></script>
+    <script type="text/javascript">
+    s.pageName=AC.Tracking.pageName();
+    s.channel="www.us.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id="ssi_Header" class="hideInXcode unified">
+            <a id="ssi_LibraryTitle" href="https://developer.apple.com/library/archive/navigation/" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/navigation/_1&quot;;return this.s_oc?this.s_oc(e):true">Documentation Archive</a>
+            <a id="ssi_AppleDeveloperConnection" href="https://developer.apple.com/" onclick="s_objectID=&quot;https://developer.apple.com/_1&quot;;return this.s_oc?this.s_oc(e):true">Developer</a>
+            <div id="ssi_SearchButton" role="button" title="Search">Search</div>
+        </div>
+        <form id="ssi_SearchMenu" method="get" action="https://developer.apple.com/library/archive/search/" accept-charset="utf-8">
+            <label for="adcsearch">Search Documentation Archive</label>
+            
+            
+    
+            <input type="search" id="ssi_SearchField" name="q" accesskey="s" results="5">
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>App Icons on iPhone, iPad and Apple Watch</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex="4" rel="alternate" title="Download PDF" class=""><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex="3" title="Download Companion File" class=""><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To…</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7" class="">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main" class="dts_doc">
+        <!-- CONTENTS -->
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="https://developer.apple.com/library/archive/qa/qa1686/index.html" style="display:none;" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/index.html_1&quot;;return this.s_oc?this.s_oc(e):true"></a>
+        
+        <a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_2" title="Technical Q&amp;A QA1686"></a><div class="dtsDocNumber">Technical Q&amp;A QA1686</div><h1 id="pageTitle">App Icons on iPhone, iPad and Apple Watch</h1><div class="importantbox clear"><aside><p><strong>Important:</strong>&nbsp;This document is no longer being updated. For the latest information about Apple SDKs, visit the <span class="content_text"><a href="https://developer.apple.com/documentation" class="urlLink" rel="external" onclick="s_objectID=&quot;https://developer.apple.com/documentation_1&quot;;return this.s_oc?this.s_oc(e):true">documentation website</a></span>.</p><p></p></aside></div><h2>Q:&nbsp;
+What icons need to be included in an iOS Application, Apple Watch Application, iMessage Application, or Sticker Pack Application?
+</h2><p><span>A: </span>Below are guidelines for handling icon files for iPhone-only apps, iPad-only apps, universal apps, Apple Watch apps, and iMessage extensions. If you are building an iMessage Application or Sticker Pack Application, you must include icons for both the <span class="content_text"><!--a  -->containing application<!--/a--></span> and the <span class="content_text"><!--a  -->iMessage extension<!--/a--></span>.</p><p>If you don't provide artwork for one of the listed optional icons, the system will automatically scale one of your existing icon images to an appropriate size. It is strongly recommended that your application include artwork for all the icons listed, at the specific sizes needed.</p><p>Prior to iOS 3.2, icon images for iPhone applications were required to follow a strict naming convention. These legacy names are still listed in the tables below along with example names for the more recent icons. Except for <code>iTunesArtwork</code>, icon images included in your app can have arbitrary names.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_3" title="Note"></a><p><strong>Note:</strong>&nbsp;All icon images must be in PNG format. Icon images may include an alpha channel but should not include any transparent regions. </p><p></p></aside></div><p>iOS ignores the PPI (Pixels Per Inch) of icon images. You may author your icon images at any PPI but their width and height, as measured in pixels, must match the values in the tables below.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_4" title="Important"></a><p><strong>Important:</strong>&nbsp;iTunesArtwork icon images should be in png format, but name them without the .png extension.</p><p></p></aside></div><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_5" title="Note"></a><p><strong>Note:</strong>&nbsp;Application icons are not localizable.</p><p></p></aside></div><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ICONS_FOR_IPHONE_ONLY_APPLICATIONS" title="Icons for iPhone-only Applications"></a><h2 class="jump">Icons for iPhone-only Applications</h2><p>iPhone-only applications use the following icons. Items marked with "<strong>Required</strong>" must be included.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_6" title="Note"></a><p><strong>Note:</strong>&nbsp;You should include images for the iPad-specific icons even if the application is not a universal app. If available, they will be used when the application is installed on an iPad.</p><p></p></aside></div><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE1" title="Table 1iPhone-only application icon requirements."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 1</strong>&nbsp;&nbsp;iPhone-only application icon requirements.</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+512x512
+</p></td><td><p>
+iTunesArtwork
+</p></td><td><p>
+App list in iTunes
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+1024x1024
+</p></td><td><p>
+iTunesArtwork@2x
+</p></td><td><p>
+App list in iTunes on devices with retina display
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+120x120
+</p></td><td><p>
+Icon-60@2x.png
+</p></td><td><p>
+Home screen on iPhone/iPod Touch with retina display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+180x180
+</p></td><td><p>
+Icon-60@3x.png
+</p></td><td><p>
+Home screen on iPhone with retina HD display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+76x76
+</p></td><td><p>
+Icon-76.png
+</p></td><td><p>
+Home screen on iPad
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+152x152
+</p></td><td><p>
+Icon-76@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+167x167
+</p></td><td><p>
+Icon-83.5@2x.png
+</p></td><td><p>
+Home screen on iPad Pro
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+40x40
+</p></td><td><p>
+Icon-Small-40.png
+</p></td><td><p>
+Spotlight
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+80x80
+</p></td><td><p>
+Icon-Small-40@2x.png
+</p></td><td><p>
+Spotlight on devices with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+120x120
+</p></td><td><p>
+Icon-Small-40@3x.png
+</p></td><td><p>
+Spotlight on devices with retina HD display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+29x29
+</p></td><td><p>
+Icon-Small.png
+</p></td><td><p>
+Settings
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+Icon-Small@2x.png
+</p></td><td><p>
+Settings on devices with retina display
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr><tr><td scope="row"><p>
+87x87
+</p></td><td><p>
+Icon-Small@3x.png
+</p></td><td><p>
+Settings on devices with retina HD display
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr></tbody></table></div><p>In addition to the above icons, iPhone-only applications with a deployment target of iOS 6.1 or earlier use the following icons. Items marked with "<strong>Required</strong>" must be included if the application's deployment target is iOS 6.1 or earlier.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE2" title="Table 2iPhone-only application icon requirements (iOS 6.1 and earlier)."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 2</strong>&nbsp;&nbsp;iPhone-only application icon requirements (iOS 6.1 and earlier).</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+57x57
+</p></td><td><p>
+Icon.png
+</p></td><td><p>
+Home screen on iPhone/iPod touch (iOS 6.1 and earlier)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+114x114
+</p></td><td><p>
+Icon@2x.png
+</p></td><td><p>
+Home screen on iPhone/iPod Touch with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+72x72
+</p></td><td><p>
+Icon-72.png
+</p></td><td><p>
+Home screen on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+144x144
+</p></td><td><p>
+Icon-72@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+29x29
+</p></td><td><p>
+Icon-Small.png
+</p></td><td><p>
+Spotlight on iPhone/iPod Touch (iOS 6.1 and earlier), and Settings on all devices
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+Icon-Small@2x.png
+</p></td><td><p>
+Spotlight on iPhone/iPod Touch with retina display (iOS 6.1 and earlier), and Settings on all devices with retina display
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+50x50
+</p></td><td><p>
+Icon-Small-50.png
+</p></td><td><p>
+Spotlight on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+100x100
+</p></td><td><p>
+Icon-Small-50@2x.png
+</p></td><td><p>
+Spotlight on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr></tbody></table></div><p>You can include distinct images for the iPhone and iPad icons in categories where the required sizes are equivalent, for example, Settings.</p><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_1&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ICONS_FOR_IPAD_ONLY_APPLICATIONS" title="Icons for iPad-only Applications"></a><h2 class="jump">Icons for iPad-only Applications</h2><p>iPad-only applications use the following icons. Items marked with "<strong>Required</strong>" must be included.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE3" title="Table 3iPad-only application icon requirements."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 3</strong>&nbsp;&nbsp;iPad-only application icon requirements.</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+512x512
+</p></td><td><p>
+iTunesArtwork
+</p></td><td><p>
+Ad Hoc iTunes
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+1024x1024
+</p></td><td><p>
+iTunesArtwork@2x
+</p></td><td><p>
+Ad Hoc iTunes on devices with retina display
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+76x76
+</p></td><td><p>
+Icon-76.png
+</p></td><td><p>
+Home screen on iPad
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+152x152
+</p></td><td><p>
+Icon-76@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+167x167
+</p></td><td><p>
+Icon-83.5@2x.png
+</p></td><td><p>
+Home screen on iPad Pro
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+40x40
+</p></td><td><p>
+Icon-Small-40.png
+</p></td><td><p>
+Spotlight
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+80x80
+</p></td><td><p>
+Icon-Small-40@2x.png
+</p></td><td><p>
+Spotlight on devices with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+29x29
+</p></td><td><p>
+Icon-Small.png
+</p></td><td><p>
+Settings
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+Icon-Small@2x.png
+</p></td><td><p>
+Settings on devices with retina display
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr></tbody></table></div><p>In addition to the above icons, iPad-only applications with a deployment target of iOS 6.1 or earlier use the following icons. Items marked with "<strong>Required</strong>" must be included if the application's deployment target is iOS 6.1 or earlier.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE4" title="Table 4iPad-only application icon requirements (iOS 6.1 and earlier)."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 4</strong>&nbsp;&nbsp;iPad-only application icon requirements (iOS 6.1 and earlier).</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+72x72
+</p></td><td><p>
+Icon-72.png
+</p></td><td><p>
+Home screen on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+144x144
+</p></td><td><p>
+Icon-72@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+50x50
+</p></td><td><p>
+Icon-Small-50.png
+</p></td><td><p>
+Spotlight on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+100x100
+</p></td><td><p>
+Icon-Small-50@2x.png
+</p></td><td><p>
+Spotlight on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr></tbody></table></div><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_2&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ICONS_FOR_UNIVERSAL_APPLICATIONS" title="Icons for Universal Applications"></a><h2 class="jump">Icons for Universal Applications</h2><p>Universal applications use the following icons. Items marked with "<strong>Required</strong>" must be included.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE5" title="Table 5Universal application icon requirements."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 5</strong>&nbsp;&nbsp;Universal application icon requirements.</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+512x512
+</p></td><td><p>
+iTunesArtwork
+</p></td><td><p>
+App list in iTunes
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+1024x1024
+</p></td><td><p>
+iTunesArtwork@2x
+</p></td><td><p>
+App list in iTunes for devices with retina display
+</p></td><td><p>
+Do not include
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+120x120
+</p></td><td><p>
+Icon-60@2x.png
+</p></td><td><p>
+Home screen on iPhone/iPod Touch with retina display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+180x180
+</p></td><td><p>
+Icon-60@3x.png
+</p></td><td><p>
+Home screen on iPhone with retina HD display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+76x76
+</p></td><td><p>
+Icon-76.png
+</p></td><td><p>
+Home screen on iPad
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+152x152
+</p></td><td><p>
+Icon-76@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+167x167
+</p></td><td><p>
+Icon-83.5@2x.png
+</p></td><td><p>
+Home screen on iPad Pro
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+40x40
+</p></td><td><p>
+Icon-Small-40.png
+</p></td><td><p>
+Spotlight
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+80x80
+</p></td><td><p>
+Icon-Small-40@2x.png
+</p></td><td><p>
+Spotlight on devices with retina display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+120x120
+</p></td><td><p>
+Icon-Small-40@3x.png
+</p></td><td><p>
+Spotlight on devices with retina HD display
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+29x29
+</p></td><td><p>
+Icon-Small.png
+</p></td><td><p>
+Settings
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+Icon-Small@2x.png
+</p></td><td><p>
+Settings on devices with retina display
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr><tr><td scope="row"><p>
+87x87
+</p></td><td><p>
+Icon-Small@3x.png
+</p></td><td><p>
+Settings on devices with retina HD display
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td><td><p>
+Recommended if you have a Settings bundle, optional otherwise
+</p></td></tr></tbody></table></div><p>In addition to the above icons, universal applications with a deployment target of iOS 6.1 or earlier use the following icons. Items marked with "<strong>Required</strong>" must be included if the application's deployment target is iOS 6.1 or earlier.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE6" title="Table 6Universal application icon requirements (iOS 6.1 and earlier)."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 6</strong>&nbsp;&nbsp;Universal application icon requirements (iOS 6.1 and earlier).</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+57x57
+</p></td><td><p>
+Icon.png
+</p></td><td><p>
+Home screen on iPhone/iPod touch (iOS 6.1 and earlier)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+114x114
+</p></td><td><p>
+Icon@2x.png
+</p></td><td><p>
+Home screen on iPhone/iPod Touch with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+72x72
+</p></td><td><p>
+Icon-72.png
+</p></td><td><p>
+Home screen on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+144x144
+</p></td><td><p>
+Icon-72@2x.png
+</p></td><td><p>
+Home screen on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+29x29
+</p></td><td><p>
+Icon-Small.png
+</p></td><td><p>
+Spotlight on iPhone/iPod Touch (iOS 6.1 and earlier), and Settings on all devices
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+Icon-Small@2x.png
+</p></td><td><p>
+Spotlight on iPhone/iPod Touch with retina display (iOS 6.1 and earlier), and Settings on all devices with retina display
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td><td><p>
+Recommended if you have a Settings bundle, otherwise optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+50x50
+</p></td><td><p>
+Icon-Small-50.png
+</p></td><td><p>
+Spotlight on iPad (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr><tr><td scope="row"><p>
+100x100
+</p></td><td><p>
+Icon-Small-50@2x.png
+</p></td><td><p>
+Spotlight on iPad with retina display (iOS 6.1 and earlier)
+</p></td><td><p>
+Optional but recommended
+</p></td><td><p>
+Optional but recommended
+</p></td></tr></tbody></table></div><p>You can include distinct images for the iPhone and iPad icons in categories where the required sizes are equivalent, for example, Settings.</p><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_3&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ICONS_FOR_WATCH_APPLICATIONS" title="Icons for Watch Applications"></a><h2 class="jump">Icons for Watch Applications</h2><p>Watch applications use the following icons. Items marked with "<strong>Required</strong>" must be included.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_7" title="Important"></a><p><strong>Important:</strong>&nbsp;Icons for Watch applications must be added to the Watch App target. Do not add Watch icons to the iOS app target or the Watch Extension target.</p><p></p></aside></div><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE7" title="Table 7Watch application icon requirements."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 7</strong>&nbsp;&nbsp;Watch application icon requirements.</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+80x80
+</p></td><td><p>
+AppIcon40x40@2x.png
+</p></td><td><p>
+Home screen on Apple Watch (38mm/42mm), Long-Look notification on Apple Watch (38mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+88x88
+</p></td><td><p>
+AppIcon44x44@2x.png
+</p></td><td><p>
+Long-Look notification on Apple Watch (42mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+172x172
+</p></td><td><p>
+AppIcon86x86@2x.png
+</p></td><td><p>
+Short-Look notification on Apple Watch (38mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+196x196
+</p></td><td><p>
+AppIcon98x98@2x.png
+</p></td><td><p>
+Short-Look notification on Apple Watch (42mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+48x48
+</p></td><td><p>
+AppIcon24x24@2x.png
+</p></td><td><p>
+Notification center on Apple Watch (38mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+55x55
+</p></td><td><p>
+AppIcon27.5x27.5@2x.png
+</p></td><td><p>
+Notification center on Apple Watch (42mm)
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+58x58
+</p></td><td><p>
+AppIcon29x29@2x.png
+</p></td><td><p>
+Settings in the Apple Watch companion app on iPhone
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+87x87
+</p></td><td><p>
+AppIcon29x29@3x.png
+</p></td><td><p>
+Settings in the Apple Watch companion app on iPhone 6 Plus
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr></tbody></table></div><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_4&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ICONS_FOR_IMESSAGE_EXTENSIONS" title="Icons for iMessage Extensions"></a><h2 class="jump">Icons for iMessage Extensions</h2><p>iMessage extensions and Sticker Pack extensions use the following icons. Items marked with "<strong>Required</strong>" must be included.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_8" title="Important"></a><p><strong>Important:</strong>&nbsp;These icons must be added to the iMessages extension or Sticker Pack extension target.</p><p></p></aside></div><a name="//apple_ref/doc/uid/DTS40009882-CH1-TABLE8" title="Table 8iMessage extension and Sticker Pack extension icon requirements."></a><div class="tableholder"><table class="graybox" border="0" cellspacing="0" cellpadding="5"><caption class="tablecaption"><strong class="caption_number">Table 8</strong>&nbsp;&nbsp;iMessage extension and Sticker Pack extension icon requirements.</caption><tbody><tr><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Image Size (px)
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+File Name
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Used For
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+App Store
+</p></th><th scope="col" class="TableHeading_TableRow_TableCell"><p>
+Ad Hoc
+</p></th></tr><tr><td scope="row"><p>
+1024x768
+</p></td><td><p>
+Messages1024x768.png
+</p></td><td><p>
+Messages App Store
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required 
+</p></td></tr><tr><td scope="row"><p>
+120x90
+</p></td><td><p>
+Messages60x45@2x.png
+</p></td><td><p>
+Messages app drawer on iPhone/iPod Touch with retina display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+180x135
+</p></td><td><p>
+Messages60x45@3x.png
+</p></td><td><p>
+Messages app drawer on iPhone with retina HD display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+134x100
+</p></td><td><p>
+Messages67x50@2x.png
+</p></td><td><p>
+Messages app drawer on iPad with retina display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+148x110
+</p></td><td><p>
+Messages74x55@2x.png
+</p></td><td><p>
+Messages app drawer on iPad Pro
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+54x40
+</p></td><td><p>
+Messages27x20@2x.png
+</p></td><td><p>
+Breadcrumb icons in the chat transcript on devices with retina display.
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+81x60
+</p></td><td><p>
+Messages27x20@3x.png
+</p></td><td><p>
+Breadcrumb icons in the chat transcript on iPhone with retina HD display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+64x48
+</p></td><td><p>
+Messages32x24@2x.png
+</p></td><td><p>
+Messages app management screen, message bubble branding on devices with retina display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr><tr><td scope="row"><p>
+96x72
+</p></td><td><p>
+Messages32x24@3x.png
+</p></td><td><p>
+Messages app management screen, message bubble branding on iPhone with retina HD display
+</p></td><td><p>
+Required
+</p></td><td><p>
+Required
+</p></td></tr></tbody></table></div><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_5&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOAPP" title="Adding Icons to an iOS Application"></a><h2 class="jump">Adding Icons to an iOS Application</h2><p>Asset catalogs are the preferred way to manage your application's icons. New projects are configured to use asset catalogs by default. If you have an older project, see <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-MIGRATE" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_1&quot;;return this.s_oc?this.s_oc(e):true">Migrating an iOS App Icon Set</a></span> to learn how to move existing app icons and launch images into an asset catalog. If you prefer not to use asset catalogs, or if you must support iOS 4.3, you can manually configure your application's icons by editing the information property list for your application. See <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-MANUAL" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_2&quot;;return this.s_oc?this.s_oc(e):true">Configuring Icons Without an Asset Catalog</a></span>.</p><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOAPP-ADDING_ICON_IMAGES_TO_AN_ASSET_CATALOG" title="Adding Icon Images to an Asset Catalog"></a><h3 class="jump">Adding Icon Images to an Asset Catalog</h3><ol class="ol"><li class="li"><p>Select the asset catalog in the project navigator. It is named Assets.xcassets for new projects, or Images.xcassets for migrated projects, by default.</p></li><li class="li"><p>From the set outline view (left column), select the app icon set. For new or migrated projects it will be named 'AppIcon'. You may need to create an icon set by clicking the (+) button in the bottom left corner of the editor and choosing <strong>App Icons and Launch Images</strong> &gt; <strong>New iOS App Icon</strong> from the context menu.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE1" title="Figure 1The AppIcon set selected in the asset catalog."></a><figcaption><strong class="caption_number">Figure 1</strong>&nbsp;&nbsp;The AppIcon set selected in the asset catalog.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_projectnavigator.png" alt="" width="550" height="316"></figure><p>The set will only contain image wells for icons that are relevant depending upon the project's configuration at the time the asset catalog was created. If an image well is missing, expand the attributes inspector and select the appropriate options from the pull-down menus under the App Icon section, depending upon the project's deployment target and supported devices.</p><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE2" title="Figure 2Enable the necessary image wells under the App Icon section of the attributes inspector."></a><figcaption><strong class="caption_number">Figure 2</strong>&nbsp;&nbsp;Enable the necessary image wells under the App Icon section of the attributes inspector.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_settingsinspector.png" alt="" width="259" height="227"></figure><ol class="ol"><li class="li"><p>Drag images from the Finder onto each image well to configure the associated icon.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE3" title="Figure 3Complete icon set for a universal application with a deployment target less than iOS 7.0"></a><figcaption><strong class="caption_number">Figure 3</strong>&nbsp;&nbsp;Complete icon set for a universal application with a deployment target less than iOS 7.0</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_iconset.png" class="wide-image" alt="" width="1002" height="764"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_iconset.png" class="ipad-scaled-image" alt="" width="670" height="510"></figure><p>Asset catalogs create a copy of images added to them. If you had previously added the images as resources to your project you can safely remove them.</p><ol class="ol"><li class="li"><p>Configure your application to use the new icon set.</p></li><li class="li"><p></p><ol class="ol"><li class="li"><p>Select the project in the project navigator.</p></li><li class="li"><p>Select the application target from the list in the left column of the project editor.</p></li><li class="li"><p>Switch to the General pane at the top of the project editor.</p></li><li class="li"><p>Select the app icon set from the App Icons Source popup menu under the App Icons And Launch Images section.</p></li></ol><p></p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE4" title="Figure 4Selecting the icon set for the application&#39;s target."></a><figcaption><strong class="caption_number">Figure 4</strong>&nbsp;&nbsp;Selecting the icon set for the application's target.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_selecticonset.png" class="wide-image" alt="" width="1107" height="519"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_selecticonset.png" class="ipad-scaled-image" alt="" width="670" height="314"></figure></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-MIGRATE" title="Migrating an iOS App Icon Set"></a><h3 class="jump">Migrating an iOS App Icon Set</h3><p>Simplify image management by moving existing app icons into an asset catalog.</p><ol class="ol"><li class="li"><p>In the project navigator, select your target.</p></li><li class="li"><p>Open the General pane, and scroll to the App Icons and Launch Images section.</p></li><li class="li"><p>Click the Use Asset Catalog button next to the App Icons Source label.</p></li></ol><p></p><figure class="figure"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_migration.png" class="wide-image" alt="Art/qa1686_assetcatalog_ios_migration.png" width="1107" height="474"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_ios_migration.png" class="ipad-scaled-image" alt="Art/qa1686_assetcatalog_ios_migration.png" width="670" height="286"></figure><p></p><ol class="ol"><li class="li"><p>Configure any options in the dialog. To choose a different asset catalog or to create a new one, click on the pop-up menu. Choose an existing asset catalog or choose New Asset Catalog to create a new one. The menu is shown when there is at least one asset catalog in the project.</p></li><li class="li"><p>Click the Migrate button. If there is no asset catalog or if you selected New Asset Catalog from the pop-up menu, you will be prompted to create one. Canceling creation of the new asset catalog will cancel the migration.</p></li></ol><p>The icons are migrated to the new or existing asset catalog.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-MANUAL" title="Configuring Icons Without an Asset Catalog"></a><h3 class="jump">Configuring Icons Without an Asset Catalog</h3><ol class="ol"><li class="li"><p>Follow the steps in the <span class="content_text"><a href="http://help.apple.com/xcode/mac/8.0/#/dev81ce1d383" class="urlLink" rel="external" onclick="s_objectID=&quot;http://help.apple.com/xcode/mac/8.0/#/dev81ce1d383_1&quot;;return this.s_oc?this.s_oc(e):true">Xcode Help</a></span> to add each icon image to your project as a resource.</p></li><li class="li"><p>Locate the target's information property list in the project navigator. By default it will be named <code>Info.plist</code>. Command click on it and choose <strong>Open As &gt; Source Code</strong> from the context menu.</p></li></ol><p>As of iOS 5.0, icons are specified by including the <code>CFBundleIcons</code> key. Older applications may have previously specified their icons by including the <code>CFBundleIconFiles</code> key. This key should be removed if it is still present (don't forget to remove any device specific variants too). All applications should migrate to the <code>CFBundleIcons</code> key to specify their icons.</p><p>The value for the <code>CFBundleIcons</code> key is a dictionary with two child keys: <code>CFBundlePrimaryIcon</code> and <code>UINewsstandIcon</code>. The <code>UINewsstandIcon</code> key is for newsstand apps and can otherwise be omitted. The value for the <code>CFBundlePrimaryIcon</code> key is a dictionary that identifies the icon images associated with the bundle. It may contain two child keys: <code>CFBundleIconFiles</code> and <code>UIPrerenderedIcon</code>. The value for the <code>UIPrerenderedIcon</code> key is a boolean that specifies whether the images already incorporate a shine effect. The value for <code>CFBundleIconFiles</code> key is an array of strings, each identifying an image in the bundle.</p><div class="importantbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_9" title="Important"></a><p><strong>Important:</strong>&nbsp;When specifying the name of each image, it is best to omit any extensions. Omitting the extension lets the system automatically detect high-resolution (<code>@2x</code> or <code>@3x</code>) variants of the image using the standard-resolution image filename. If you include extensions, you must specify all image files (including the high-resolution variants) explicitly.</p><p></p></aside></div><a name="//apple_ref/doc/uid/DTS40009882-CH1-SOURCECODE1" title="Listing 1Example configuration for a universal app."></a><p class="codesample clear"><strong class="caption_number">Listing 1</strong>&nbsp;&nbsp;Example configuration for a universal app.</p><div class="codesample clear"><table><tbody><tr><td scope="row"><pre>&lt;key&gt;CFBundleIcons&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;key&gt;CFBundlePrimaryIcon&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;key&gt;CFBundleIconFiles&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small-40&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small-50&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-60&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-72&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;/array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;/dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;/dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;key&gt;CFBundleIcons~ipad&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;key&gt;CFBundlePrimaryIcon&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;key&gt;CFBundleIconFiles&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small-40&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-Small-50&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-72&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-76&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>            &lt;string&gt;Icon-83.5&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>        &lt;/array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;/dict&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;/dict&gt;<span></span></pre></td></tr></tbody></table></div><p>If your application supports iOS 4.3 you must also include the <code>CFBundleIconFiles</code> key to specify the application's icon images. The value for this key is an array of strings, each identifying an image in the bundle. If you have included images for the iPad-specific icons, you may either list them under the <code>CFBundleIconFiles</code> key, or you may list them under the device specific <code>CFBundleIconFiles~ipad</code> key. iPad-only applications should list their icon images under the <code>CFBundleIconFiles</code> key.</p><a name="//apple_ref/doc/uid/DTS40009882-CH1-SOURCECODE2" title="Listing 2Example configuration for a universal app with deployment target of iOS 4.3."></a><p class="codesample clear"><strong class="caption_number">Listing 2</strong>&nbsp;&nbsp;Example configuration for a universal app with deployment target of iOS 4.3.</p><div class="codesample clear"><table><tbody><tr><td scope="row"><pre>&lt;key&gt;CFBundleIconFiles&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small-40&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small-50&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-60&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-72&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;/array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;key&gt;CFBundleIconFiles~ipad&lt;/key&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;array&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small-40&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-Small-50&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-72&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-76&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>    &lt;string&gt;Icon-167&lt;/string&gt;<span></span></pre></td></tr><tr><td scope="row"><pre>&lt;/array&gt;<span></span></pre></td></tr></tbody></table></div></section><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_6&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOWATCHKITAPP" title="Adding Icons to a Watch Application"></a><h2 class="jump">Adding Icons to a Watch Application</h2><p>Asset catalogs are the preferred way to manage your Watch application's icons. New projects are configured to use asset catalogs by default.</p><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOWATCHKITAPP-ADDING_ICON_IMAGES_TO_AN_ASSET_CATALOG" title="Adding Icon Images to an Asset Catalog"></a><h3 class="jump">Adding Icon Images to an Asset Catalog</h3><ol class="ol"><li class="li"><p>Select the asset catalog in the project navigator. It is named Images.xcassets by default.</p></li><li class="li"><p>From the left column of the editor, select the icon set. For new it will be named 'AppIcon'. You may need to create an icon set by clicking the (+) button in the bottom left corner of the editor and choosing 'New App Icon' from the context menu.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE5" title="Figure 5The AppIcon set selected in the asset catalog."></a><figcaption><strong class="caption_number">Figure 5</strong>&nbsp;&nbsp;The AppIcon set selected in the asset catalog.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_watch_projectnavigator.png" alt="" width="550" height="316"></figure><p>By default, the set will only contain image wells for watch icons. If image wells for iOS app icons are present, expand the attributes inspector and select the appropriate options from the pull-down menus under the App Icon section.</p><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE6" title="Figure 6Enable only the Apple Watch image wells under the App Icon pane of the settings inspector."></a><figcaption><strong class="caption_number">Figure 6</strong>&nbsp;&nbsp;Enable only the Apple Watch image wells under the App Icon pane of the settings inspector.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_watch_settingsinspector.png" alt="" width="259" height="227"></figure><ol class="ol"><li class="li"><p>Drag images from the Finder onto each image well to configure the associated icon.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE7" title="Figure 7Complete icon set for a Watch application."></a><figcaption><strong class="caption_number">Figure 7</strong>&nbsp;&nbsp;Complete icon set for a Watch application.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_watch_assetcatalog_3.png" class="wide-image" alt="" width="821" height="182"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_watch_assetcatalog_3.png" class="ipad-scaled-image" alt="" width="670" height="148"></figure><p>Asset catalogs create a copy of images added to them. If you had previously added the images as resources to your project you can safely remove them.</p><ol class="ol"><li class="li"><p>Configure the Watch application to use the new icon set.</p></li><li class="li"><p></p><ol class="ol"><li class="li"><p>Select the project in the project navigator.</p></li><li class="li"><p>Select the Watch App target from the list in the left column of the project editor.</p></li><li class="li"><p>Switch to the General pane at the top of the project editor.</p></li><li class="li"><p>Select the icon set from the App Icons Source popup menu under the App Icons section.</p></li></ol><p></p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE8" title="Figure 8Selecting the icon set for the Watch application&#39;s target."></a><figcaption><strong class="caption_number">Figure 8</strong>&nbsp;&nbsp;Selecting the icon set for the Watch application's target.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_watch_selecticonset.png" class="wide-image" alt="" width="1107" height="519"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_watch_selecticonset.png" class="ipad-scaled-image" alt="" width="670" height="314"></figure></section><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_7&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOIMESSAGEEXTENSION" title="Adding Icons to an iMessage Extension"></a><h2 class="jump">Adding Icons to an iMessage Extension</h2><p>Asset catalogs are the preferred way to manage iMessage extension and Sticker Pack extension icons. New projects are configured to use asset catalogs by default.</p><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDTOIMESSAGEEXTENSION-ADDING_ICON_IMAGES_TO_AN_ASSET_CATALOG" title="Adding Icon Images to an Asset Catalog"></a><h3 class="jump">Adding Icon Images to an Asset Catalog</h3><ol class="ol"><li class="li"><p>Select the asset catalog in the project navigator. It is named Assets.xcassets by default.</p></li><li class="li"><p>From the set outline view (left column), select the app icon set. It is named 'iMessage App Icon' by default. You may need to create an icon set by clicking the (+) button in the bottom left corner of the editor and choosing <strong>App Icons and Launch Images</strong> &gt; <strong>New Messages Extension Icon</strong> from the context menu.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE9" title="Figure 9The iMessage extension Icon set selected in the asset catalog."></a><figcaption><strong class="caption_number">Figure 9</strong>&nbsp;&nbsp;The iMessage extension Icon set selected in the asset catalog.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_messages_projectnavigator.png" alt="" width="550" height="316"></figure><ol class="ol"><li class="li"><p>Drag images from the Finder onto each image well to configure the associated icon.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE10" title="Figure 10Complete icon set for an iMessage extension.  Sizes shown in each image are the height in pixels."></a><figcaption><strong class="caption_number">Figure 10</strong>&nbsp;&nbsp;Complete icon set for an iMessage extension.  Sizes shown in each image are the height in pixels.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_messages_iconset.png" alt="" width="510" height="668"></figure><ol class="ol"><li class="li"><p>Configure the extension to use the new icon set.</p></li><li class="li"><p></p><ol class="ol"><li class="li"><p>Select the project in the project navigator.</p></li><li class="li"><p>Select the iMessage extension or Sticker Pack extension target from the list in the left column of the project editor.</p></li><li class="li"><p>Switch to the General pane at the top of the project editor.</p></li><li class="li"><p>Select the icon set from the Sticker Icons Source popup menu under the App Icons section.</p></li></ol><p></p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE11" title="Figure 11Selecting the icon set for an iMessage extension&#39;s target."></a><figcaption><strong class="caption_number">Figure 11</strong>&nbsp;&nbsp;Selecting the icon set for an iMessage extension's target.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_messages_selecticonset.png" class="wide-image" alt="" width="1107" height="519"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_assetcatalog_messages_selecticonset.png" class="ipad-scaled-image" alt="" width="670" height="314"></figure></section><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_8&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING" title="Troubleshooting"></a><h2 class="jump">Troubleshooting</h2><p>This section describes common problems and how to fix them.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_10" title="Note"></a><p><strong>Note:</strong>&nbsp;Before attempting further troubleshooting, perform a clean build of the application (Hold down the <strong>Option</strong> key and choose <strong>Product &gt; Clean Build Folder</strong>, then <strong>Product &gt; Build</strong> from the Xcode menu bar) and remove the app from the test device or simulator. Build the app again and attempt to reproduce the problem. You may also try clearing the contents of Xcode's derived data folder (<code>~/Library/Developer/Xcode/DerivedData/</code>) before building again.</p><p></p></aside></div><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TOUBLESHOOT_REMOVE_KEYS" title="[Asset Catalogs] Remove icon related keys from the information property list"></a><h3 class="jump">[Asset Catalogs] Remove icon related keys from the information property list</h3><p>If a target is using asset catalogs to manage its icons then its information property list should not include any icon related keys; they will be added at build time by the asset catalog compiler. </p><ol class="ol"><li class="li"><p>Open the information property list for the target. It can be found under the <strong>Info</strong> tab in the project editor or in the project navigator where it will likely be named either <code>Info.plist</code> or <code>&lt;ProductName&gt;-Info.plist</code>.</p></li><li class="li"><p>Remove the following keys, including device specific variations.</p><ul class="ul"><li class="li"><p>“Icon file” (<code>CFBundleIconFile</code>)</p></li><li class="li"><p>“Icon files” (<code>CFBundleIconFiles</code>)</p></li><li class="li"><p><code>CFBundleIcons</code></p></li></ul></li></ol></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TOUBLESHOOT_CATALOG_ASSOCIATION" title="[Asset Catalogs] Verify that the asset catalog is associated with the target"></a><h3 class="jump">[Asset Catalogs] Verify that the asset catalog is associated with the target</h3><p>If a target is using asset catalogs to manage its icons, verify that the asset catalog file is associated with the target and that the correct image set is selected for the target's App Icons Source.</p><ol class="ol"><li class="li"><p>Select the asset catalog in the project navigator.</p></li><li class="li"><p>In the utility panel, check the box next to the target under the Target Membership section as shown in <span class="content_text"><!--a  -->Figure 12<!--/a--></span>.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE12" title="Figure 12Associating an asset catalog with a build target"></a><figcaption><strong class="caption_number">Figure 12</strong>&nbsp;&nbsp;Associating an asset catalog with a build target</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_assetcatalog_associate.png" alt="" width="259" height="327"></figure><ol class="ol"><li class="li"><p>Select the project in the project navigator.</p></li><li class="li"><p>Select the target from the list in the left column of the project editor.</p></li><li class="li"><p>Switch to the General pane at the top of the project editor.</p></li><li class="li"><p>Verify that the name of the icon set is selected in the App Icons Source popup menu under the App Icons and Launch Images section as shown in <span class="content_text"><!--a  -->Figure 4<!--/a--></span>.</p></li></ol></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TOUBLESHOOT_IMAGE_ASSOCIATION" title="[Manual] Verify that all icon images are associated with the target"></a><h3 class="jump">[Manual] Verify that all icon images are associated with the target</h3><p>If a target is not using asset catalogs to manage its icons, verify that each of the icon images are associated with the target. Images that are not associated with the target are not copied into the target's bundle when it is built.</p><ol class="ol"><li class="li"><p>Select the icon image in the project navigator.</p></li><li class="li"><p>In the utility panel, check the box next to the target under the Target Membership pane as shown in <span class="content_text"><!--a  -->Figure 13<!--/a--></span>.</p></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE13" title="Figure 13Associating an image with a build target"></a><figcaption><strong class="caption_number">Figure 13</strong>&nbsp;&nbsp;Associating an image with a build target</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_manual_associate.png" class="wide-image" alt="" width="1107" height="474"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_manual_associate.png" class="ipad-scaled-image" alt="" width="670" height="286"></figure></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING-_MANUAL__VERIFY_THAT_THE_CFBUNDLEICONS_KEY_IS_PRESENT_IN_THE_INFORMATION_PROPERTY_LIST" title="[Manual] Verify that the CFBundleIcons key is present in the information property list"></a><h3 class="jump">[Manual] Verify that the CFBundleIcons key is present in the information property list</h3><p>If a target is not using asset catalogs to manage its icons, the information property list must contain the CFBundleIcons key to specify the application's icon images. See <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-MANUAL" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_3&quot;;return this.s_oc?this.s_oc(e):true">Configuring Icons Without an Asset Catalog</a></span>.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_11" title="Note"></a><p><strong>Note:</strong>&nbsp;Older applications may have previously specified their application icons by including the CFBundleIconFiles key. You should migrate these applications to use the <code>CFBundleIcons</code> key instead.</p><p></p></aside></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING-_MANUAL__VERIFY_THAT_ALL_IMAGES_REFERENCED_BY_THE_CFBUNDLEICONS_KEY_ARE_PRESENT" title="[Manual] Verify that all images referenced by the CFBundleIcons key are present"></a><h3 class="jump">[Manual] Verify that all images referenced by the CFBundleIcons key are present</h3><p>If a target is not using asset catalogs to manage its icons, each of the entries under the CFBundleIcons key in the information property must reference at least one image in the app bundle. Remember that if you include filename extensions in the information property list, you must specify the names of all icon image files (including the high-resolution variants) explicitly.</p><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE14" title="Figure 14There must be a matching image for each entry in the CFBundleIcons key."></a><figcaption><strong class="caption_number">Figure 14</strong>&nbsp;&nbsp;There must be a matching image for each entry in the CFBundleIcons key.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_manual_cfbundleicons.png" class="wide-image" alt="" width="1176" height="552"><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_manual_cfbundleicons.png" class="ipad-scaled-image" alt="" width="670" height="314"></figure></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TOUBLESHOOT_IMAGE_FORMAT" title="Verify that all icon images are in PNG format, use a supported color model, and are the correct sizes"></a><h3 class="jump">Verify that all icon images are in PNG format, use a supported color model, and are the correct sizes</h3><p>All icon images must be in PNG format and use a supported color model. Images that do not use the RGB color model may appear correctly in Xcode but will fail to load on the device. You can use the Preview application to inspect the format, color model, and size of an image.</p><ol class="ol"><li class="li"><p>Open the image in Preview</p><ul class="ul"><li class="li"><p>For an image inside of an asset catalog: Select the asset catalog in the project navigator, choose the image set containing the icons, select the image and choose <strong>File &gt; Open with External Editor</strong>.</p></li><li class="li"><p>For an image not inside of an asset catalog: Select the image in the project navigator and choose <strong>File &gt; Open with External Editor</strong>.</p></li></ul></li><li class="li"><p>From the Preview menubar, choose <strong>Tools &gt; Show Inspector</strong>.</p></li><li class="li"><p>The Inspector window opens</p><ul class="ul"><li class="li"><p>The value of the Document Type field shows the image format. It should be Portal Network Graphics image.</p></li><li class="li"><p>The value of the Image Size field shows the image size. It should match the size shown in the tabes above.</p></li><li class="li"><p>The value of the Color Model field shows the image size. It should be RGB.</p></li></ul></li></ol><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE15" title="Figure 15The Preview inspector window."></a><figcaption><strong class="caption_number">Figure 15</strong>&nbsp;&nbsp;The Preview inspector window.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_preview_inspectorwindow.png" alt="" width="320" height="249"></figure><p>If the Document Type is not a Portal Network Graphics image, use Preview to export a copy of the image in PNG format.</p><ol class="ol"><li class="li"><p>From the Preview menubar, choose <strong>File &gt; Export</strong>.</p></li><li class="li"><p>Select PNG from the Format menu at the bottom of the save dialog.</p></li><li class="li"><p>Click the Save button.</p></li><li class="li"><p>Import the saved image into your Xcode project, replacing the original image.</p></li></ol><p>Repeat the above for all icon images.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING-VALIDATION_ERRORS" title="Validation Errors"></a><h3 class="jump">Validation Errors</h3><p>There are multiple icon-related problems that will result in your application failing  validation by Xcode or iTunes Connect. The underlying issue depends upon the error.</p><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_VALIDATION_ERRORS-ITMS_90022_ITMS_90023__MISSING_REQUIRED_ICON_FILE" title="ITMS-90022/ITMS-90023: Missing required icon file"></a><h4 class="jump">ITMS-90022/ITMS-90023: Missing required icon file</h4><p>You have not included an image for one or more of the required icons, based on your application's supported devices and deployment target. </p><p>Refer to the tables above for the list of required icons. Verify that each of your icon images <span class="content_text"><!--a  -->matches the size<!--/a--></span> listed in the table.</p><p>If your application was recently migrated to use asset catalogs to manage its icons, verify that you have <span class="content_text"><!--a  -->removed all icon-related keys<!--/a--></span> from your application's information property list.</p><p>If your application is not using asset catalogs to manage its icons, verify that the <span class="content_text"><!--a  -->CFBundleIcons key is present<!--/a--></span> in your application's information property list, and all listed images <span class="content_text"><!--a  -->are present<!--/a--></span> in your application bundle.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_VALIDATION_ERRORS-ITMS_90032__INVALID_IMAGE_PATH" title="ITMS-90032: Invalid Image Path"></a><h4 class="jump">ITMS-90032: Invalid Image Path</h4><p>Your application's information property list references one or more icon images that were not included in the compiled bundle. </p><p>If your application is using asset catalogs to manage its icons, verify that you have <span class="content_text"><!--a  -->removed all icon-related keys<!--/a--></span> from your application's information property list.</p><p>If your application is not using asset catalogs to manage its icons, verify that all images referenced by the <code>CFBundleIcons</code> key in the application's information property list <span class="content_text"><!--a  -->are present<!--/a--></span> and are <span class="content_text"><!--a  -->associated with the application target<!--/a--></span>.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_VALIDATION_ERRORS-ITMS_90033__INVALID_IMAGE" title="ITMS-90033: Invalid Image"></a><h4 class="jump">ITMS-90033: Invalid Image</h4><p>One or more of your application's icon images is not a valid PNG file. <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-TOUBLESHOOT_IMAGE_FORMAT" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_4&quot;;return this.s_oc?this.s_oc(e):true">Verify that all icon images are in PNG format, use a supported color model, and are the correct sizes</a></span>.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_VALIDATION_ERRORS-ITMS_90647__INVALID__MESSAGES__IMAGE_ASSET" title="ITMS-90647: Invalid (Messages) Image Asset"></a><h4 class="jump">ITMS-90647: Invalid (Messages) Image Asset</h4><p>One or more of the icons in your iMessage extension or Sticker Pack extension contains transparent areas. Icons for iMessage extensions and Sticker Pack extensions must be opaque.</p><p>You can use the Preview app to check your image for transparent areas, which will appear dark grey as shown in <span class="content_text"><!--a  -->Figure 17<!--/a--></span>. Use your preferred graphics editing software to fill in the transparent areas with the desired background color.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_VALIDATION_ERRORS-ITMS_90649__MISSING__MESSAGES__APP_ICON" title="ITMS-90649: Missing (Messages) App Icon"></a><h4 class="jump">ITMS-90649: Missing (Messages) App Icon</h4><p>You have not included an image for one or more of the required icons in your iMessage extension or Sticker Pack extension, or one of your icons is not the correct size. Refer to the tables above for the list of required icons. Verify that each of your icon images <span class="content_text"><!--a  -->matches the size<!--/a--></span> listed in the table.</p><p>Icons for iMessage extensions and Sticker Pack Extensions must be added to the asset catalog associated with the iMessage extension or Sticker Pack extension target. See <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-ADDTOIMESSAGEEXTENSION" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_5&quot;;return this.s_oc?this.s_oc(e):true">Adding Icons to an iMessage Extension</a></span>.</p></section></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING-OTHER_ERRORS" title="Other Errors"></a><h3 class="jump">Other Errors</h3><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_OTHER_ERRORS-ICONS_DON_T_APPEAR_ON_THE_DEVICE" title="Icons don&#39;t appear on the device"></a><h4 class="jump">Icons don't appear on the device</h4><p>If the project is using asset catalogs to manage its icons, <span class="content_text"><!--a  -->verify that the asset catalog is associated with the target<!--/a--></span>.</p><p>If the project is not using asset catalogs to manage its icons, verify that all images referenced by the <code>CFBundleIcons</code> key in the application's information property list <span class="content_text"><!--a  -->are present<!--/a--></span> are <span class="content_text"><!--a  -->associated with the application target<!--/a--></span>, and are <span class="content_text"><!--a  -->in a supported format<!--/a--></span>.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_OTHER_ERRORS-A_PREVIOUS_VERSION_OF_THE_ICON_APPEARS_ON_THE_DEVICE" title="A previous version of the icon appears on the device"></a><h4 class="jump">A previous version of the icon appears on the device</h4><p>Your testing device or simulator may have a partially outdated build. That is, Xcode failed to copy a modified resource to the app bundle it installed on the device as part of the build &amp; run process. To force Xcode to copy the most recent resources from your project directory:</p><ol class="ol"><li class="li"><p>Remove the app from your testing device or simulator.</p></li><li class="li"><p>Clean the build directory. Hold down the <strong>Option</strong> key and choose <strong>Product &gt; Clean Build Folder</strong>, then <strong>Product &gt; Build</strong> from the Xcode menu bar</p></li><li class="li"><p>Build and run your app.</p></li></ol><p>If your project is using asset catalogs then you must replace the modified image in the asset catalog. Asset catalogs do not track files on disk, opting instead to make a copy of the image at the time it is added to the asset catalog.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_MESSAGES_MISSING_ICON_IPAD" title="Messages App Icon Is Missing On iPad"></a><h4 class="jump">Messages App Icon Is Missing On iPad</h4><p>Verify that you have included icons for all of the sizes listed in <span class="content_text"><!--a  -->Table 8<!--/a--></span> in the iMessage extension or Sticker Pack extension target. See <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-ADDTOIMESSAGEEXTENSION" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_6&quot;;return this.s_oc?this.s_oc(e):true">Adding Icons to an iMessage Extension</a></span>.</p><p>In addition, open the information property list for the iMessage extension or Sticker Pack extension and <span class="content_text"><!--a  -->remove all icon-related keys<!--/a--></span>.</p></section></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING-ICON_HAS_A_BLACK_BORDER" title="Icon has a black border"></a><h3 class="jump">Icon has a black border</h3><p>Your icon artwork includes rounded corners or transparent areas. iOS will automatically apply a mask that rounds the corners to each icon it displays on the Home screen. Do not inset your icon artwork and make sure your icon has 90° corners so it looks good after the mask is applied.</p><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE16" title="Figure 16When iOS displays an app icon on the Home screen of a device, it automatically applies a mask that rounds the corners."></a><figcaption><strong class="caption_number">Figure 16</strong>&nbsp;&nbsp;When iOS displays an app icon on the Home screen of a device, it automatically applies a mask that rounds the corners.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_trouble_rounding.png" alt="" width="636" height="363"></figure><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_ICON_HAS_A_BLACK_BORDER-ICON_HAS_A_BLACK_BACKGROUND_IN_THE_APP_STORE" title="Icon has a black background in the App Store"></a><h4 class="jump">Icon has a black background in the App Store</h4><p>The Large App Icon you uploaded to iTunes Connect includes transparent areas. The <span class="content_text"><a href="https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html" class="urlLink" rel="external" onclick="s_objectID=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_1&quot;;return this.s_oc?this.s_oc(e):true">iTunes Connect Developer Guide</a></span> lists the complete requirements for the Large App Icon, including that it must be opaque.</p><p>You can use the Preview app to check your image for transparent areas, which will appear dark grey as shown in <span class="content_text"><!--a  -->Figure 17<!--/a--></span>. Use your preferred graphics editing software to fill in the transparent areas with the desired background color.</p><figure class="figure"><a name="//apple_ref/doc/uid/DTS40009882-CH1-FIGURE17" title="Figure 17Preview&#39;s dark grey canvas background is visible through transparent areas in an image."></a><figcaption><strong class="caption_number">Figure 17</strong>&nbsp;&nbsp;Preview's dark grey canvas background is visible through transparent areas in an image.</figcaption><img src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/qa1686_TransparentAreas.png" alt="" width="448" height="280"></figure></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-TROUBLESHOOTING_ICON_HAS_A_BLACK_BORDER-THE_WRONG_ICON_APPEARS_IN_THE_APP_STORE" title="The wrong icon appears in the App Store"></a><h4 class="jump">The wrong icon appears in the App Store</h4><p>The application bundle includes additional images which are being detected as valid icon images.</p><div class="notebox"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_12" title="Note"></a><p><strong>Note:</strong>&nbsp;Different icon images from the application's bundle, and the large app icon, are displayed in various contexts within the App Store. For example, the incorrect icon image may appear in the search results but not on your application's landing page.</p><p></p></aside></div><p><strong>You may encounter this issue</strong> if your icon images deviate from the naming convention shown in the <span class="content_text"><!--a  -->above tables<!--/a--></span>. If your application bundle also contains one or more images that match the naming convention in the tables above, these images may be detected as valid icon images by the App Store. This may occur regardless of whether those images are included in the asset catalog or are referenced by the application's information property list. The solution is to rename or remove the images.</p><p><strong>You may encounter this issue</strong> when building an app using a third party development environment or if your project was created using a template project provided by a third party. Both will usually include a default set of icon images. If you fail to remove these images or replace <strong>all</strong> of them with your own artwork, the App Store may display them in the search results for your app. Like the iOS home screen, the icons displayed in the search results depend upon the current device. It is possible that the incorrect icon is shown in the search results on certain devices but not others.</p><p>The solution is to delete any instances of the template-provided icons that remain in your project and remove any references to the deleted files from the information property list. Due to the wide variety of ways in which iOS versions have allowed developers to specify app icons in the information property list, you may find it simpler and less error prone to remove all icon related keys from the information property list and then reconfigure your app's icons using the steps presented in <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-ADDTOAPP" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_7&quot;;return this.s_oc?this.s_oc(e):true">Adding Icons to an iOS Application</a></span>. See <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-AGAIN" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_8&quot;;return this.s_oc?this.s_oc(e):true">Start Over</a></span>.</p></section></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-AGAIN" title="Start Over"></a><h3 class="jump">Start Over</h3><p>If the none of the above solutions resolve the problem, follow the steps below to remove all the icons and icon related configuration from the application. Then follow the steps in <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-ADDTOAPP" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_9&quot;;return this.s_oc?this.s_oc(e):true">Adding Icons to an iOS Application</a></span> to re-configure the proper icons for the application.</p><div class="warningbox clear"><aside><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_13" title="Warning"></a><p><strong>Warning:</strong>&nbsp;Make sure you have a backup of your icon artwork at a location outside of your project directory.</p><p></p><div class="clear"></div></aside></div><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-AGAIN-REMOVE_THE_ICON_SET_FROM_YOUR_ASSET_CATALOG" title="Remove the Icon Set From Your Asset Catalog"></a><h4 class="jump">Remove the Icon Set From Your Asset Catalog</h4><ol class="ol"><li class="li"><p>Select the asset catalog in the project navigator. It is named Assets.xcassets or Images.xcassets by default.</p></li><li class="li"><p>From the set outline view (left column), control click the icon set and choose <code>Remove Selected Items</code> from the context menu. By default the icon set will be named 'AppIcon'.</p></li></ol></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-AGAIN-REMOVE_ICON_IMAGES_FROM_YOUR_PROJECT" title="Remove Icon Images From Your Project"></a><h4 class="jump">Remove Icon Images From Your Project</h4><p>Using the Xcode project navigator, remove any icon images from your project that were previously added to your project as resources. Icon images usually have a file name beginning with 'Icon' or 'AppIcon'.</p></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-AGAIN-REMOVE_ICON_RELATED_KEYS_FROM_THE_INFORMATION_PROPERTY_LIST" title="Remove Icon Related Keys From The Information Property List"></a><h4 class="jump">Remove Icon Related Keys From The Information Property List</h4><ol class="ol"><li class="li"><p>Open the information property list for your application. It can be found under the <strong>Info</strong> tab in the project editor or in the navigator where it will likely be named either <code>YourApp-Info.plist</code> or <code>Info.plist</code>.</p></li><li class="li"><p>Remove the following keys, including device specific variations.</p><ul class="ul"><li class="li"><p>“Icon file” (<code>CFBundleIconFile</code>)</p></li><li class="li"><p>“Icon files” (<code>CFBundleIconFiles</code>)</p></li><li class="li"><p><code>CFBundleIcons</code></p></li></ul></li></ol></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-AGAIN-CLEAN_THE_PROJECT" title="Clean The Project"></a><h4 class="jump">Clean The Project</h4><p>To remove any cached icons, clean your target. Choose <strong>Product &gt; Clean</strong> from the menu bar.</p><p>Finally, follow the steps in <span class="content_text"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882-CH1-ADDTOAPP" data-renderer-version="1" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882_10&quot;;return this.s_oc?this.s_oc(e):true">Adding Icons to an iOS Application</a></span> to re-configure the proper icons for the application.</p></section></section><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_9&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><section><a name="//apple_ref/doc/uid/DTS40009882-CH1-ADDITIONAL_RESOURCES" title="Additional Resources"></a><h2 class="jump">Additional Resources</h2><p>For additional information, see the <span class="content_text"><a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW1" class="urlLink" rel="external" onclick="s_objectID=&quot;https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/_1&quot;;return this.s_oc?this.s_oc(e):true">App Icons</a></span> section in the iOS App Programming Guide. </p><p>For information about designing your application's icons, see the <span class="content_text"><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" class="urlLink" rel="external" onclick="s_objectID=&quot;https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppIcon_1&quot;;return this.s_oc?this.s_oc(e):true">App Icon</a></span> section of the iOS Human Interface Guidelines.</p><p>For an example project with properly configured icons, see the <span class="content_text"><a href="https://developer.apple.com/library/ios/samplecode/Icons/Introduction/Intro.html" class="urlLink" rel="external" onclick="s_objectID=&quot;https://developer.apple.com/library/ios/samplecode/Icons/Introduction/Intro.html_1&quot;;return this.s_oc?this.s_oc(e):true">Application Icons and Launch Images for iOS</a></span> sample code.</p><div class="back_to_top"><a href="https://developer.apple.com/library/archive/qa/qa1686/_index.html#top" onclick="s_objectID=&quot;https://developer.apple.com/library/archive/qa/qa1686/_index.html#top_10&quot;;return this.s_oc?this.s_oc(e):true">Back to Top</a></div></section><br><hr><a name="//apple_ref/doc/uid/DTS40009882-CH1-DontLinkElementID_1" title="Document Revision History"></a><a name="//apple_ref/doc/uid/DTS40009882-RevisionHistory-DontLinkElementID_1" title="Document Revision History"></a><h4>Document Revision History</h4><br><table class="graybox revision-history" border="0" cellspacing="0" cellpadding="5"><colgroup span="1"><col width="145"></colgroup><tbody><tr><th scope="col" align="left"><strong>Date</strong></th><th scope="col" align="left"><strong>Notes</strong></th></tr><tr><td scope="row">2016-12-20</td><td><p>Updated for Xcode 8, Apple Watch and Messages extensions.</p></td></tr><tr><td scope="row">2014-12-01</td><td><p>Added iPhone 6 Plus icons.  Further expanded the troubleshooting section.</p></td></tr><tr><td scope="row">&nbsp;</td><td><p>Added iPhone 6 Plus icons.  Further expanded the troubleshooting section.</p></td></tr><tr><td scope="row">&nbsp;</td><td><p>Added iPhone 6 Plus icons.  Further expanded the troubleshooting section.</p></td></tr><tr><td scope="row">2014-05-19</td><td><p>Added troubleshooting steps for incorrect icons appearing in the App Store search results.</p></td></tr><tr><td scope="row">2014-02-03</td><td><p>Updated for Xcode 5 and iOS 7.</p></td></tr><tr><td scope="row">2013-07-18</td><td><p>Added icon information for iPad with retina display.</p></td></tr><tr><td scope="row">2011-07-14</td><td><p>After iOS 4.3, order doesn't matter in the icon arrangement. Added links to related references.</p></td></tr><tr><td scope="row">2010-07-14</td><td><p>Fixed outdated "Add Icon files in Info.plist" section.</p></td></tr><tr><td scope="row">2010-07-12</td><td><p>Updated for iOS 4 requirements.</p></td></tr><tr><td scope="row">2010-04-09</td><td><p>New document that 
+					explains how the icon files in an application bundle are used on iPhone, iPad and Apple Watch.</p></td></tr></tbody></table><br>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            
+        </div><br>
+        <div class="copyright"><br><hr><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright © 2016 Apple Inc. All Rights Reserved.  <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank" onclick="s_objectID=&quot;http://www.apple.com/legal/internet-services/terms/site.html_1&quot;;return this.s_oc?this.s_oc(e):true">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank" onclick="s_objectID=&quot;http://www.apple.com/privacy/_1&quot;;return this.s_oc?this.s_oc(e):true">Privacy Policy</a>  |  Updated: 2016-12-20</p></div></div>
+
+        <!-- /CONTENTS -->
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    
+    <script charset="utf-8" src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/prototype.js"></script>
+    <script src="./Technical Q&amp;A QA1686_ App Icons on iPhone, iPad and Apple Watch_files/library.js"></script>
+
+
+</body></html>

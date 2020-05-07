@@ -1,0 +1,9 @@
+.video-frame-ipad-landscape .video-play, .video-frame-ipad-landscape .video-replay {
+	display: block !important;
+}
+
+@media all and (max-width: 735px) {
+	.device-iphonex-container .video-replay.device-iphonex {
+		top: 0px;
+	}
+}
